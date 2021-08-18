@@ -1,0 +1,222 @@
+/*
+-colors.css
+Author: Troy Milante
+Description: Mythos Color Sets
+*/
+/*Highlight colors*/
+::selection {
+  background-color: purple;
+  color: white;
+}
+/*Background Colors*/
+.bg-full-black {
+  background-color: black;
+}
+.bg-trans {
+  background-color: transparent;
+}
+.bg-yellow {
+  background-color: #F4B400;
+}
+.bg-green {
+  background-color: #0F9D58;
+}
+.bg-red {
+  background-color: #DB4437;
+}
+.bg-blue {
+  background-color: #4285F4;
+}
+.bg-white {
+  background-color: white;
+  color: black;
+}
+.bg-black {
+  background-color: #1a1a1a;
+  color: white;
+}
+.bg-orange {
+  background-color: darkorange;
+}
+.bg-purple {
+  background-color: purple;
+}
+.bg-violet {
+  background-color: violet;
+}
+.bg-brown {
+  background-color: brown;
+}
+.bg-grey {
+  background-color: grey;
+}
+.bg-deep-purple {
+  background-color: #7c4dff;
+}
+.bg-maroon {
+  background-color: maroon;
+  color: white;
+}
+.bg-s1-black {
+  background-color: black;
+  color: white;
+}
+.bg-s2-black {
+  background-color: #1f1f1f;
+}
+.bg-s3-black-opac {
+  background-color: rgba(0,0,0,0.7);
+}
+/*Palletes*/
+/*Pallete 1*/
+.cp1-pc {
+  background-color: #010038;
+  color: white
+}
+.cp1-sc {
+  background-color: #293A80;
+}
+.cp1-tc {
+  background-color: #537ec5;
+}
+.cp1-tnc {
+  background-color: #01004A;
+  color: white;
+}
+.cp1-splc {
+  background-color: #F39422;
+}
+/*Pallete 2*/
+.cp2-pc {
+  background-color: #6e2142;
+  color: white
+}
+.cp2-sc {
+  background-color: #943855;
+}
+.cp2-tc {
+  background-color: #e16363;
+}
+.cp2-tnc {
+  background-color: #bd2424;
+  color: white;
+}
+.cp2-splc {
+  background-color: #ffd692;
+}
+/*Pallete 3*/
+.cp3-pc {
+  background-color: #db3e23;
+}
+.cp3-sc {
+  background-color: #e2644e;
+}
+.cp3-tc {
+  background-color: #ed9e91;
+}
+.cp3-splc {
+  background-color: #f4c5bd;
+}
+.cp3-splc2 {
+  background-color: #fbebe9;
+}
+/*CPPB*/
+.cppb-pc {
+  background-color: #1f1f1f;
+  color: white;
+}
+.cppb-sc {
+  background-color: #2e2e2e;
+  color: white;
+}
+.cppb-tc {
+  background-color: #545955;
+  color: white;
+}
+.cppb-qrtcc {
+  background-color: #68756c;
+  color: white;
+}
+/*Text Colors*/
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+.yellow {
+  color: #F4B400;
+}
+.green {
+  color: #0F9D58;
+}
+.red {
+  color: #DB4437;
+}
+.blue {
+  color: #4285F4;
+}
+/*Colors [a.class]*/
+.white a {
+  font-weight: bold;
+}
+/*Text decorations*/
+.txtdec-none:hover {
+  text-decoration: none;
+}
+
+/*Hr*/
+hr.white {
+  border: 1px solid white;
+  border-radius: 50%;
+}
+/*Borders*/
+.brd-2-s-white {
+  border: 2px solid white;
+}
+.brd-2-s-white-bottom {
+  border-bottom: 2px solid white;
+}
+
+/*Hover Colors*/
+.hover-red:hover {
+  color: red;
+}
+
+/*Material Theming*/
+.mt-pc {
+  background-color: #38273d;
+  color: white;
+}
+.mt-pc-dark {
+  background-color: #2b0b38;
+  color: white;
+}
+.mt-pc-light {
+  background-color: #4d355e;
+  color: white;
+}
+.mt-sc {
+  background-color: #c700c7;
+  color: #4f0946;
+}
+.mt-sc-dark {
+  background-color: #9000ad;
+  color: white;
+}
+.mt-sc-light {
+  background-color: #e346e9;
+  color: white;
+}
+
+/*Table of Elements Color System*/
+.non-metal {background-color: #F4B400}
+.alkali-metals {background-color: #db3e23;}
+.alkaline-earth-metals {background-color: #4285F4;}
+.transition-metals {background-color: #537ec5;}
+.post-transition-metal {background-color: #0F9D58;}
+.metalloid {background-color: rgb(100, 202, 5);}
+.noble-gas {background-color: #e2644e;}
+.halogen {background-color: #972714}
+.lanthanide {background-color: #cbaf71}
+.actinide {background-color: #fab647}

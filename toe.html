@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Mythos</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/colors.css">
+      <link rel="stylesheet" href="css/scrollbar.css">
+      <link rel="stylesheet" href="Webfonts/Montserrat/montserrat.css">
+      <link rel="stylesheet" href="css/fa/css/fontawesome.css">
+      <link rel="stylesheet" href="css/fa/css/brands.css">
+      <link rel="stylesheet" href="css/fa/css/regular.css">
+      <link rel="stylesheet" href="css/fa/css/solid.css">
+      <style>
+        .montserrat {
+          font-family: "Montserrat";
+        }
+        .montserrat-400 {
+          font-family: "Montserrat";
+          font-weight: 400;
+        }
+        .montserrat-700 {
+          font-family: "Montserrat";
+          font-weight: 700;
+        }
+      </style>
+    </head>
+
+    <body class="mt-pc" onerror="addError(); errorMATOE004()">
+      <nav class="topnav mt-pc-dark">
+        <h1 class="montserrat-700 slide-in-left-hs">Periodic Table App</h1>
+        <div class="nav-buttons-div">
+        <button class="nav-button fas fa-search mt-pc-light" id="trigger" title="Search"></button>
+        <button class="nav-button fas fa-caret-left mt-pc-light" id="odp" title="Show Sidenav. Also show your recently opened element data."></button>
+        <button class="nav-button fas fa-desktop mt-pc-light" id="lcl" title="[Local] Console Log"></button>
+        <button class="nav-button fas fa-sticky-note mt-pc-light" id="lul" title="[Local] Update Log"></button>
+        </div>
+      </nav>
+      <div>
+        <center>
+        <table class="main-div">
+          <tr>
+            <th class="non-metal" data-tool-tip="Hydrogen | Non-Metal" onclick="openDataPreview(); hydrogen();"><sup class="element-number">1</sup>H</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th class="noble-gas" data-tool-tip="Helium | Noble Gas" onclick="openDataPreview(); helium();"><sup class="element-number">2</sup>He</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Lithium | Alkali Metals" onclick="openDataPreview(); lithium();"><sup class="element-number">3</sup>Li</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Beryllium | Alkaline Earth Metals" onclick="openDataPreview(); berrylium();"><sup class="element-number">4</sup>Be</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th class="metalloid" data-tool-tip="Boron | Metalloid" onclick="openDataPreview(); boron();"><sup class="element-number">5</sup>B</th>
+            <th class="non-metal" data-tool-tip="Carbon | Non-Metal" onclick="openDataPreview(); carbon();"><sup class="element-number">6</sup>C</th>
+            <th class="non-metal" data-tool-tip="Nitrogen | Non-Metal" onclick="openDataPreview(); nitrogen();"><sup class="element-number">7</sup>N</th>
+            <th class="non-metal" data-tool-tip="Oxygen | Non-Metal" onclick="openDataPreview(); oxygen();"><sup class="element-number">8</sup>O</th>
+            <th class="halogen" data-tool-tip="Fluorine | Halogen" onclick="openDataPreview(); fluorine();"><sup class="element-number">9</sup>F</th>
+            <th class="noble-gas" data-tool-tip="Neon | Noble Gas" onclick="openDataPreview(); neon();"><sup class="element-number">10</sup>Ne</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Sodium | Alkali Metals" onclick="openDataPreview(); sodium();"><sup class="element-number">11</sup>Na</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Magnesium | Alkaline Earth Metals" onclick="openDataPreview(); magnesium();"><sup class="element-number">12</sup>Mg</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th class="post-transition-metal" data-tool-tip="Aluminum | Post-Transition Metal" onclick="openDataPreview(); aluminum();"><sup class="element-number">13</sup>Al</th>
+            <th class="metalloid" data-tool-tip="Silicon | Metalloid" onclick="openDataPreview(); silicon();"><sup class="element-number">14</sup>Si</th>
+            <th class="non-metal" data-tool-tip="Phosphorus | Non-Metal" onclick="openDataPreview(); phosphorus();"><sup class="element-number">15</sup>P</th>
+            <th class="non-metal" data-tool-tip="Sulfur | Non-Metal" onclick="openDataPreview(); sulfur();"><sup class="element-number">16</sup>S</th>
+            <th class="halogen" data-tool-tip="Chlorine | Halogen" onclick="openDataPreview(); chlorine();"><sup class="element-number">17</sup>Cl</th>
+            <th class="noble-gas" data-tool-tip="Argon | Noble Gas" onclick="openDataPreview(); argon();"><sup class="element-number">18</sup>Ar</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Potassium | Alkali Metals" onclick="openDataPreview(); potassium();"><sup class="element-number">19</sup>K</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Calcium | Alkaline Earth Metals" onclick="openDataPreview(); calcium();"><sup class="element-number">20</sup>Ca</th>
+            <th class="transition-metals" data-tool-tip="Scandium | Transition Metal" onclick="openDataPreview(); scandium();"><sup class="element-number">21</sup>Sc</th>
+            <th class="transition-metals" data-tool-tip="Titanium | Transition Metal" onclick="openDataPreview(); titanium();"><sup class="element-number">22</sup>Ti</th>
+            <th class="transition-metals" data-tool-tip="Vanadium | Transition Metal" onclick="openDataPreview(); vanadium();"><sup class="element-number">23</sup>V</th>
+            <th class="transition-metals" data-tool-tip="Chromium | Transition Metal" onclick="openDataPreview(); chromium();"><sup class="element-number">24</sup>Cr</th>
+            <th class="transition-metals" data-tool-tip="Manganese | Transition Metal" onclick="openDataPreview(); manganese();"><sup class="element-number">25</sup>Mn</th>
+            <th class="transition-metals" data-tool-tip="Iron | Transition Metal" onclick="openDataPreview(); iron();"><sup class="element-number">26</sup>Fe</th>
+            <th class="transition-metals" data-tool-tip="Cobalt | Transition Metal" onclick="openDataPreview(); cobalt();"><sup class="element-number">27</sup>Co</th>
+            <th class="transition-metals" data-tool-tip="Nickel | Transition Metal" onclick="openDataPreview(); nickel();"><sup class="element-number">28</sup>Ni</th>
+            <th class="transition-metals" data-tool-tip="Copper | Transition Metal" onclick="openDataPreview(); copper();"><sup class="element-number">29</sup>Cu</th>
+            <th class="transition-metals" data-tool-tip="Zinc | Transition Metal" onclick="openDataPreview(); zinc();"><sup class="element-number">30</sup>Zn</th>
+            <th class="post-transition-metal" data-tool-tip="Gallium | Post-Transition Metal" onclick="openDataPreview(); gallium();"><sup class="element-number">31</sup>Ga</th>
+            <th class="metalloid" data-tool-tip="Germanium | Metalloid" onclick="openDataPreview(); germanium();"><sup class="element-number">32</sup>Ge</th>
+            <th class="metalloid" data-tool-tip="Arsenic | Metalloid" onclick="openDataPreview(); arsenic();"><sup class="element-number">33</sup>As</th>
+            <th class="non-metal" data-tool-tip="Selenium | Non-Metal" onclick="openDataPreview(); selenium();"><sup class="element-number">34</sup>Se</th>
+            <th class="halogen" data-tool-tip="Bromine | Halogen" onclick="openDataPreview(); bromine();"><sup class="element-number">35</sup>Br</th>
+            <th class="noble-gas" data-tool-tip="Krypton | Noble Gas" onclick="openDataPreview(); krypton();"><sup class="element-number">36</sup>Kr</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Rubidium | Alkali Metals"><sup class="element-number" onclick="openDataPreview(); rubidium();">37</sup>Rb</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Strontium | Alkaline Earth Metals" onclick="openDataPreview(); strontium();"><sup class="element-number">38</sup>Sr</th>
+            <th class="transition-metals" data-tool-tip="Yttrium | Transition Metal" onclick="openDataPreview(); yttrium();"><sup class="element-number">39</sup>Y</th>
+            <th class="transition-metals" data-tool-tip="Zirconium | Transition Metal" onclick="openDataPreview(); zirconium();"><sup class="element-number">40</sup>Zr</th>
+            <th class="transition-metals" data-tool-tip="Niobium | Transition Metal" onclick="openDataPreview(); niobium();"><sup class="element-number">41</sup>Nb</th>
+            <th class="transition-metals" data-tool-tip="Molybdenum | Transition Metal" onclick="openDataPreview(); molybdenum();"><sup class="element-number">42</sup>Mo</th>
+            <th class="transition-metals" data-tool-tip="Technetium | Transition Metal" onclick="openDataPreview(); technetium();"><sup class="element-number">43</sup>Tc</th>
+            <th class="transition-metals" data-tool-tip="Ruthenium | Transition Metal" onclick="openDataPreview(); ruthenium();"><sup class="element-number">44</sup>Ru</th>
+            <th class="transition-metals" data-tool-tip="Rhodium | Transition Metal" onclick="openDataPreview(); rhodium();"><sup class="element-number">45</sup>Rh</th>
+            <th class="transition-metals" data-tool-tip="Palladium | Transition Metal" onclick="openDataPreview(); palladium();"><sup class="element-number">46</sup>Pd</th>
+            <th class="transition-metals" data-tool-tip="Silver | Transition Metal" onclick="openDataPreview(); silver();"><sup class="element-number">47</sup>Ag</th>
+            <th class="transition-metals" data-tool-tip="Cadmium | Transition Metal" onclick="openDataPreview(); cadmium();"><sup class="element-number">48</sup>Cd</th>
+            <th class="post-transition-metal" data-tool-tip="Indium | Post-Transition Metal" onclick="openDataPreview(); indium();"><sup class="element-number">49</sup>In</th>
+            <th class="post-transition-metal" data-tool-tip="Tin | Post-Transition Metal" onclick="openDataPreview(); tin();"><sup class="element-number">50</sup>Sn</th>
+            <th class="metalloid" data-tool-tip="Antimony | Metalloid" onclick="openDataPreview(); antimony();"><sup class="element-number">51</sup>Sb</th>
+            <th class="metalloid" data-tool-tip="Tellurium | Metalloid" onclick="openDataPreview(); tellurium();"><sup class="element-number">52</sup>Te</th>
+            <th class="halogen" data-tool-tip="Iodine | Halogen" onclick="openDataPreview(); iodine();"><sup class="element-number">53</sup>I</th>
+            <th class="noble-gas" data-tool-tip="Xenon | Noble Gas" onclick="openDataPreview(); xenon();"><sup class="element-number">54</sup>Xe</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Cesium | Alkali Metals" onclick="openDataPreview(); cesium();"><sup class="element-number">55</sup>Cs</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Barium | Alkaline Earth Metals" onclick="openDataPreview(); barium();"><sup class="element-number">56</sup>Ba</th>
+            <td></td>
+            <th class="transition-metals" data-tool-tip="Hafnium | Transition Metal" onclick="openDataPreview(); hafnium();"><sup class="element-number">72</sup>Hf</th>
+            <th class="transition-metals" data-tool-tip="Tantalum | Transition Metal" onclick="openDataPreview(); tantalum();"><sup class="element-number">73</sup>Ta</th>
+            <th class="transition-metals" data-tool-tip="Tungsten | Transition Metal" onclick="openDataPreview(); tungsten();"><sup class="element-number">74</sup>W</th>
+            <th class="transition-metals" data-tool-tip="Rhenium | Transition Metal" onclick="openDataPreview(); rhenium();"><sup class="element-number">75</sup>Re</th>
+            <th class="transition-metals" data-tool-tip="Osmium | Transition Metal" onclick="openDataPreview(); osmium();"><sup class="element-number">76</sup>Os</th>
+            <th class="transition-metals" data-tool-tip="Iridium | Transition Metal" onclick="openDataPreview(); iridium();"><sup class="element-number">77</sup>Ir</th>
+            <th class="transition-metals" data-tool-tip="Platinum | Transition Metal" onclick="openDataPreview(); platinum();"><sup class="element-number">78</sup>Pt</th>
+            <th class="transition-metals" data-tool-tip="Gold | Transition Metal" onclick="openDataPreview(); gold();"><sup class="element-number">79</sup>Au</th>
+            <th class="transition-metals" data-tool-tip="Mercury | Transition Metal" onclick="openDataPreview(); mercury();"><sup class="element-number">80</sup>Hg</th>
+            <th class="post-transition-metal" data-tool-tip="Thallium | Post-Transition Metal" onclick="openDataPreview(); thallium();"><sup class="element-number">81</sup>Tl</th>
+            <th class="post-transition-metal" data-tool-tip="Lead | Post-Transition Metal" onclick="openDataPreview(); lead();"><sup class="element-number">82</sup>Pb</th>
+            <th class="post-transition-metal" data-tool-tip="Bismuth | Post-Transition Metal" onclick="openDataPreview(); bismuth();"><sup class="element-number">83</sup>Bi</th>
+            <th class="metalloid" data-tool-tip="Polonium | Metalloid" onclick="openDataPreview(); polonium();"><sup class="element-number">84</sup>Po</th>
+            <th class="halogen" data-tool-tip="Astatine | Halogen" onclick="openDataPreview(); astatine();"><sup class="element-number">85</sup>At</th>
+            <th class="noble-gas" data-tool-tip="Radon | Noble Gas" onclick="openDataPreview(); radon();"><sup class="element-number">86</sup>Rn</th>
+          </tr>
+
+          <tr>
+            <th class="alkali-metals" data-tool-tip="Francium | Alkali Metals" onclick="openDataPreview(); francium();"><sup class="element-number">87</sup>Fr</th>
+            <th class="alkaline-earth-metals" data-tool-tip="Radium | Alkaline Earth Metals" onclick="openDataPreview(); radium();"><sup class="element-number">88</sup>Ra</th>
+            <td></td>
+            <th class="transition-metals" data-tool-tip="Rutherfordium | Transition Metal" onclick="openDataPreview(); rutherfordium();"><sup class="element-number">104</sup>Rf</th>
+            <th class="transition-metals" data-tool-tip="Dubnium | Transition Metal" onclick="openDataPreview(); dubnium();"><sup class="element-number">105</sup>Db</th>
+            <th class="transition-metals" data-tool-tip="Seaborgium | Transition Metal" onclick="openDataPreview(); seaborgium();"><sup class="element-number">106</sup>Sg</th>
+            <th class="transition-metals" data-tool-tip="Bohrium | Transition Metal" onclick="openDataPreview(); bohrium();"><sup class="element-number">107</sup>Bh</th>
+            <th class="transition-metals" data-tool-tip="Hassium | Transition Metal" onclick="openDataPreview(); hassium();"><sup class="element-number">108</sup>Hs</th>
+            <th class="transition-metals" data-tool-tip="Meitnerium | Transition Metal" onclick="openDataPreview(); meitnerium();"><sup class="element-number">109</sup>Mt</th>
+            <th class="transition-metals" data-tool-tip="Darmstadtium | Transition Metal" onclick="openDataPreview(); darmstadtium();"><sup class="element-number">110</sup>Ds</th>
+            <th class="transition-metals" data-tool-tip="Roentgenium | Transition Metal" onclick="openDataPreview(); roentgenium();"><sup class="element-number">111</sup>Rg</th>
+            <th class="transition-metals" data-tool-tip="Copernicium | Transition Metal" onclick="openDataPreview(); copernicium();"><sup class="element-number">112</sup>Cn</th>
+            <th class="post-transition-metal" data-tool-tip="Nihonium | Post-Transition Metal" onclick="openDataPreview(); nihonium();"><sup class="element-number">113</sup>Nh</th>
+            <th class="post-transition-metal" data-tool-tip="Flerovium | Post-Transition Metal" onclick="openDataPreview(); flerovium();"><sup class="element-number">114</sup>Fl</th>
+            <th class="post-transition-metal" data-tool-tip="Moscovium | Post-Transition Metal" onclick="openDataPreview(); moscovium();"><sup class="element-number">115</sup>Mc</th>
+            <th class="post-transition-metal" data-tool-tip="Livermorium | Post-Transition Metal" onclick="openDataPreview(); livermorium();"><sup class="element-number">116</sup>Lv</th>
+            <th class="halogen" data-tool-tip="Tennessine | Halogen" onclick="openDataPreview(); tennessine();"><sup class="element-number">117</sup>Ts</th>
+            <th class="noble-gas" data-tool-tip="Oganesson | Noble Gas" onclick="openDataPreview(); oganesson();"><sup class="element-number">118</sup>Og</th>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <th class="lanthanide" data-tool-tip="Lanthanum | Lanthanide" onclick="openDataPreview(); lanthanum();"><sup class="element-number">57</sup>La</th>
+            <th class="lanthanide" data-tool-tip="Cerium | Lanthanide" onclick="openDataPreview(); cerium();"><sup class="element-number">58</sup>Ce</th>
+            <th class="lanthanide" data-tool-tip="Praseodymium | Lanthanide" onclick="openDataPreview(); praseodymium();"><sup class="element-number">59</sup>Pr</th>
+            <th class="lanthanide" data-tool-tip="Neodymium | Lanthanide" onclick="openDataPreview(); neodymium();"><sup class="element-number">60</sup>Nd</th>
+            <th class="lanthanide" data-tool-tip="Promethium | Lanthanide" onclick="openDataPreview(); promethium(); "><sup class="element-number">61</sup>Pm</th>
+            <th class="lanthanide" data-tool-tip="Samarium | Lanthanide" onclick="openDataPreview(); samarium();"><sup class="element-number">62</sup>Sm</th>
+            <th class="lanthanide" data-tool-tip="Europium | Lanthanide" onclick="openDataPreview(); europium();"><sup class="element-number">63</sup>Eu</th>
+            <th class="lanthanide" data-tool-tip="Gadolinium | Lanthanide" onclick="openDataPreview(); gadolinium();"><sup class="element-number">64</sup>Gd</th>
+            <th class="lanthanide" data-tool-tip="Terbium | Lanthanide" onclick="openDataPreview(); terbium();"><sup class="element-number">65</sup>Tb</th>
+            <th class="lanthanide" data-tool-tip="Dysprosium | Lanthanide" onclick="openDataPreview(); dysprosium();"><sup class="element-number">66</sup>Dy</th>
+            <th class="lanthanide" data-tool-tip="Holmium | Lanthanide" onclick="openDataPreview(); holmium();"><sup class="element-number">67</sup>Ho</th>
+            <th class="lanthanide" data-tool-tip="Erbium | Lanthanide" onclick="openDataPreview(); erbium();"><sup class="element-number">68</sup>Er</th>
+            <th class="lanthanide" data-tool-tip="Thulium | Lanthanide" onclick="openDataPreview(); thulium();"><sup class="element-number">69</sup>Tm</th>
+            <th class="lanthanide" data-tool-tip="Ytterbium | Lanthanide" onclick="openDataPreview(); ytterbium();"><sup class="element-number">70</sup>Yb</th>
+            <th class="lanthanide" data-tool-tip="Lutetium | Lanthanide" onclick="openDataPreview(); lutetium();"><sup class="element-number">71</sup>Lu</th>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td></td>
+            <th class="actinide" data-tool-tip="Actinium | Actinide" onclick="openDataPreview(); actinium(); "><sup class="element-number">89</sup>Ac</th>
+            <th class="actinide" data-tool-tip="Thorium | Actinide" onclick="openDataPreview(); thorium(); "><sup class="element-number">90</sup>Th</th>
+            <th class="actinide" data-tool-tip="Protactinium | Actinide" onclick="openDataPreview(); protactinium(); "><sup class="element-number">91</sup>Pa</th>
+            <th class="actinide" data-tool-tip="Uranium | Actinide" onclick="openDataPreview(); uranium(); "><sup class="element-number">92</sup>U</th>
+            <th class="actinide" data-tool-tip="Neptunium | Actinide" onclick="openDataPreview(); neptunium(); "><sup class="element-number">93</sup>Np</th>
+            <th class="actinide" data-tool-tip="Plutonium | Actinide" onclick="openDataPreview(); plutonium(); "><sup class="element-number">94</sup>Pu</th>
+            <th class="actinide" data-tool-tip="Americium | Actinide" onclick="openDataPreview(); americium(); "><sup class="element-number">95</sup>Am</th>
+            <th class="actinide" data-tool-tip="Curium | Actinide" onclick="openDataPreview(); curium(); "><sup class="element-number">96</sup>Cm</th>
+            <th class="actinide" data-tool-tip="Berkelium | Actinide" onclick="openDataPreview(); berkelium(); "><sup class="element-number">97</sup>Bk</th>
+            <th class="actinide" data-tool-tip="Californium | Actinide" onclick="openDataPreview(); californium(); "><sup class="element-number">98</sup>Cf</th>
+            <th class="actinide" data-tool-tip="Einsteinium | Actinide" onclick="openDataPreview(); einsteinium(); "><sup class="element-number">99</sup>Es</th>
+            <th class="actinide" data-tool-tip="Fermium | Actinide" onclick="openDataPreview(); fermium(); "><sup class="element-number">100</sup>Fm</th>
+            <th class="actinide" data-tool-tip="Mendelevium | Actinide" onclick="openDataPreview(); mendelevium(); "><sup class="element-number">101</sup>Md</th>
+            <th class="actinide" data-tool-tip="Nobelium | Actinide" onclick="openDataPreview(); nobelium(); "><sup class="element-number">102</sup>No</th>
+            <th class="actinide" data-tool-tip="Lawrencium | Actinide" onclick="openDataPreview(); lawrencium(); "><sup class="element-number">103</sup>Lr</th>
+            <td></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <div class="bg-opacity" id="element-preview-opac">
+        <div id="element-preview" class="mt-pc-light montserrat">
+          <center>
+          <h2 id="ep-name">Error: No Data Available</h2>
+          <div class="ep-symbol" id="ep-symbol-div"><h1 id="ep-symbol">#</h1></div>
+          <br>
+          <h3>Element Data:</h3><br>
+          <div class="mini-card mt-sc-light"><p>Atomic Configuration:<br><span id="atom-config">#</span></p></div>
+          <div class="mini-card mt-sc-dark"><p>Chemical Group Block:<br><span id="cgb">#</span></p></div>
+          <div class="mini-card mt-sc-light"><p>Atomic Number:<br><span id="atomic-number">#</span></p></div>
+          <div class="mini-card mt-sc-dark"><p>Atomic Mass:<br><span id="atomic-mass">#</span></p></div>
+          <button id="expand" class="btn button-s1 button-s1-a fas fa-expand-arrows-alt"><span class="montserrat-700">Expand</span></button i>
+          <button class="btn button-s1 button-s1-a fas fa-forward" id="next"><span class="montserrat-700">Next Element</span></button>
+          <button class="btn button-s1 button-s1-a fas fa-backward" id="prev"><span class="montserrat-700">Previous Element</span></button>
+          <button class="btn button-s1 button-s1-a fas fa-window-close" id="close-predata" onclick="hideRi()"><span class="montserrat-700">Close</span></button>
+          <button class="btn button-s1 button-s1-a fas fa-bug" id="rab"><span class="montserrat-700">Report A Bug</span></button>
+          </center>
+          <div id="radioactive" data-tool-tip="Radioactive element: an element subject to spontaneous degeneration of its nucleus accompanied by the emission of alpha particles, beta particles, or gamma rays.">
+            <img src="img/radiation.png" width="50px">
+          </div>
+        </div>
+      </div>
+      <div id="status-footer-toe" class="mt-pc-dark font-cg" title="This is a status bar. System health and other concerned datas will be showed here.">
+        <div title="Error counter">
+          <span class="montserrat-400 copyright" style="white-space: nowrap;">Developed By: Troy Milante</span>
+        </div>
+        <div>
+          <span id="error-count">0</span> Error/s
+        </div>
+        <div>
+          <span class="sf-head-text montserrat-700" id="athena-head" data-tool-tip="Click me!" title="">Athena™</span>
+        </div>
+
+            <div id="date"></div>
+            <div id="time"></div>
+
+        </div>
+
+      <div id="error-div" class="bg-red slide-in-left-hs">
+        <span class="fas fa-window-close" id="error-close"></span>
+        <p class="eid-head">Error <span id="eid"></span></p>
+        <p id="error-msg">Error occured!</p>
+        <br>
+        <span class="dismiss">Press <span class="fas fa-window-close"></span> to dismiss or reload the page.<br> If you found this error wrong, please proceed to "Report a Bug".</span>
+      </div>
+      <div id="sei-div" class="mt-pc-dark slide-in-left-hs">
+        <span class="close-btn fas fa-window-close" onclick="hideSei()"></span>
+        <h3 class="font-cg-400">Search Element by Atomic Number</h3>
+      <form action="javascript:void(0)" name="seid">
+        <input type="text" onsubmit="searchEid()" id="search-element-id" name="sei_input" placeholder="Enter atomic number">
+        <button onclick="searchEid(this.form)" type="submit" class="btn button-s1 button-s1-a fas fa-search" id="trigger"><span class="montserrat-700">Search Element</span></button o>
+        </form>
+      </div>
+      <div id="black-opac"></div>
+      <div id="credit-modal" class="mt-pc-dark fade-in">
+        <div id="title"><center><span class="sf-head-text montserrat-700" id="athena-logo" title="">Athena™</span></center></div>
+        <div id="head-text">
+          <p class="h-t"><b>Infos:</b></p>
+          <span>
+            Athena™<br>
+            All rights reserved to their respective owners.<br>
+            Copyright Mythos © 2020<br>
+            Developed by: Troy Milante
+          </span>
+        </div>
+        <div id="resources">
+          <p class="h-t"><b>Resources Related Links:</b></p>
+          <a href="https://rsc.org">https://rsc.org</a><br>
+          <a href="https://google.com.ph">https://google.com.ph</a><br>
+          <a href="https://wikipedia.org">https://wikipedia.org</a><br>
+          <a href="https://www.quora.com/What-does-radioactive-elements-mean">https://www.quora.com › What-does-radioactive-elements-mean</a>
+        </div>
+        <div id="updates">
+          <p class="h-t"><b>App Updates</b></p>
+          <p>BETA Version: <span id="beta-version-id">2.4.2</span></p>
+          <p>App Version: <span id="app-version-id">1.0.0</span></p>
+          <p>Client Version: <span id="client-version-id">2.4.2 / 1.0.0</span></p>
+          <p>Installed Version: BETA 2.4.2</p>
+          <p id="update-status">Your client is up to date!</p>
+          <button class="c-c-btn mt-pc-light" id="close-infos">Close</button>
+        </div>
+      </div>
+      </div>
+      
+      <div id="luldiv" class="mt-pc-dark fade-in">
+        <button class="close-btn fas fa-window-close" id="clul"></button>
+        <p>Update Log: </p>
+        <code>
+          BETA 2.4.2: BETA will always make your site forced to offline mode.<br>
+          -Search feature<br>
+          -Automated error responses<br>
+          -Error Counter<br>
+          -[Preview] Bug reporting system<br>
+          -[Preview] Console<br>
+          -[Include] Stable 1.0.0<br>
+          -[Fix] Atomic Mass 77<br>
+          <br>
+          <hr>
+          <br>
+          Stable 1.0.0:<br>
+          -Table of Elements with sidenav to preview datas available. [Limited if offline]<br>
+          -Date and Time<br>
+          -Interactable Tables<br>
+        </code s>
+      </div>
+      <script src="js/functions.js"></script>
+    </body>
+  </html>
