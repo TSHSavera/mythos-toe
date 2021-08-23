@@ -35,7 +35,8 @@
         <button class="nav-button fas fa-sticky-note mt-pc-light" id="lul" title="[Local] Update Log"></button>
         </div>
       </nav>
-      <div>
+      <!--Main Periodic Table Container-->
+      <div class="table-1">
         <center>
         <table class="main-div">
           <tr>
@@ -250,6 +251,13 @@
         </table>
         </center>
       </div>
+      
+      <!--Specialized View 2-->
+      <div class="periodic-element-groups">
+
+      </div>
+
+
       <div class="bg-opacity" id="element-preview-opac">
         <div id="element-preview" class="mt-pc-light montserrat">
           <center>
@@ -274,19 +282,38 @@
       </div>
       <div id="status-footer-toe" class="mt-pc-dark font-cg" title="This is a status bar. System health and other concerned datas will be showed here.">
         <div title="Error counter">
-          <span class="montserrat-400 copyright" style="white-space: nowrap;">Developed By: Troy Milante</span>
+          <!--<span class="montserrat-400 copyright" style="white-space: nowrap;">Developed By: Troy Milante</span>-->
+          <span class="sf-head-text montserrat-700" id="athena-head" data-tool-tip="Click me!" title="">Athena™</span>
         </div>
         <div>
           <span id="error-count">0</span> Error/s
         </div>
         <div>
-          <span class="sf-head-text montserrat-700" id="athena-head" data-tool-tip="Click me!" title="">Athena™</span>
+          <button id="show-gas-type-menu" onclick="showGTMenu()">Show Gas Types</button>
+          <button id="hide-gas-type-menu" onclick="hideGTMenu()">Hide Gas Types</button>
         </div>
 
             <div id="date"></div>
             <div id="time"></div>
 
         </div>
+
+      <!--Gases Type Menu-->
+      <div id=sgtm>
+        <div id="sgtm-in">
+            <button onclick="hReset()" class="mt-sc-dark">Reset</button>
+            <button onclick="hAlkaliMetals()" class="alkali-metals">Alkali Metals</button>
+            <button onclick="hAlkalineEarthMetals()" class="alkaline-earth-metals">Alkaline Earth Metals</button>
+            <button onclick="hTransitionMetals  ()" class="transition-metals">Transtion Metals</button>
+            <button onclick="hPostTransitionMetals()"class="post-transition-metal">Post Transtion Metals</button>
+            <button onclick="hNonMetal()" class="non-metal">Non Metal</button>
+            <button onclick="hHalogens()" class="halogen">Halogens</button>
+            <button onclick="hNobleGas()" class="noble-gas">Noble Gas</button>
+            <button onclick="hMetalloid()" class="metalloid">Metalloid</button>
+            <button onclick="hLanthanide()" class="lanthanide">Lanthanide</button>
+            <button onclick="hActinide()" class="actinide">Actinide</button>
+        </div>
+      </div>
 
       <div id="error-div" class="bg-red slide-in-left-hs">
         <span class="fas fa-window-close" id="error-close"></span>
@@ -312,7 +339,7 @@
             Athena™<br>
             All rights reserved to their respective owners.<br>
             Copyright Mythos © 2020<br>
-            Developed by: Troy Milante
+            Developed by: Troy Milante<br>
           </span>
         </div>
         <div id="resources">
@@ -324,10 +351,10 @@
         </div>
         <div id="updates">
           <p class="h-t"><b>App Updates</b></p>
-          <p>BETA Version: <span id="beta-version-id">2.4.2</span></p>
+          <p>BETA Version: <span id="beta-version-id">2.5.2</span></p>
           <p>App Version: <span id="app-version-id">1.0.0</span></p>
-          <p>Client Version: <span id="client-version-id">2.4.2 / 1.0.0</span></p>
-          <p>Installed Version: BETA 2.4.2</p>
+          <p>Client Version: <span id="client-version-id">2.5.2 / 1.0.0</span></p>
+          <p>Installed Version: BETA 2.5.2</p>
           <p id="update-status">Your client is up to date!</p>
           <button class="c-c-btn mt-pc-light" id="close-infos">Close</button>
         </div>
@@ -338,7 +365,11 @@
         <button class="close-btn fas fa-window-close" id="clul"></button>
         <p>Update Log: </p>
         <code>
-          BETA 2.4.2: BETA will always make your site forced to offline mode.<br>
+          BETA 2.5.2: BETA will always make your site forced to offline mode.<br>
+          2.5.2
+          -Show gas type menu<br>
+          -Highlights selected gas type<br>
+          2.4.2<br>
           -Search feature<br>
           -Automated error responses<br>
           -Error Counter<br>
@@ -346,13 +377,6 @@
           -[Preview] Console<br>
           -[Include] Stable 1.0.0<br>
           -[Fix] Atomic Mass 77<br>
-          <br>
-          <hr>
-          <br>
-          Stable 1.0.0:<br>
-          -Table of Elements with sidenav to preview datas available. [Limited if offline]<br>
-          -Date and Time<br>
-          -Interactable Tables<br>
         </code s>
       </div>
       <script src="js/functions.js"></script>

@@ -64,6 +64,9 @@ input::-webkit-inner-spin-button {
   font-size: 8px;
   font-family: "Century Gothic";
 }
+button {
+  cursor: pointer;
+}
 table tr th {
   height: 30px;
   width: 30px;
@@ -71,6 +74,7 @@ table tr th {
   max-height: 100px;
   padding: 8px;
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 table tr td {
   height: 30px;
@@ -79,6 +83,7 @@ table tr td {
   max-height: 100px;
   padding: 8px;
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 th[data-tool-tip] {
   position: relative;
@@ -655,6 +660,45 @@ th[data-tool-tip]:hover::after {
   font-family: "Century Gothic";
   font-weight: 400;
 }
+
+
+/*2021 Commits*/
+#show-gas-type-menu, #hide-gas-type-menu {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #4d355e;
+  color: white;
+}
+#hide-gas-type-menu {
+  display: none;
+}
+
+#sgtm {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  opacity: 0;
+}
+#sgtm-in {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  padding: 2em 10em;
+  transition: all 0.5s;
+}
+#sgtm-in button {
+  border: none;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 12px;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+
 
 /*
 Animations.css
