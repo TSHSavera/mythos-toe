@@ -3441,3 +3441,408 @@ var expand = document.getElementById("expand");
 
 expand.addEventListener("click", errorMATOE005);
 expand.addEventListener("click", addError);
+
+//Periodic-element-groups view
+//Variables
+var AlkaliMetals = document.querySelectorAll(".alkali-metals");
+var AlkalineEarthMetals = document.querySelectorAll(".alkaline-earth-metals");
+var TransitionMetals = document.querySelectorAll(".transition-metals");
+var PostTransitionMetals = document.querySelectorAll(".post-transition-metal");
+var NonMetal = document.querySelectorAll(".non-metal");
+var Halogen = document.querySelectorAll(".halogen");
+var NobleGas = document.querySelectorAll(".noble-gas");
+var Metalloid = document.querySelectorAll(".metalloid");
+var Lanthanide = document.querySelectorAll(".lanthanide");
+var Actinide = document.querySelectorAll(".actinide");
+
+//Highlight Reset
+function hReset() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "1";
+    }
+}
+
+//Highlight Alkali Metals
+function hAlkaliMetals() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Alkaline Earth Metals
+function hAlkalineEarthMetals() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Transition Metals
+function hTransitionMetals() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Post Transition Metals
+function hPostTransitionMetals() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Non Metals
+function hNonMetal() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Halogens
+function hHalogens() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Noble Gas
+function hNobleGas() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Metalloid
+function hMetalloid() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Lanthanide
+function hLanthanide() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "0.1";
+    }
+}
+
+//Highlight Actinide
+function hActinide() {
+    for (i = 0; i < AlkaliMetals.length; i++) {
+        AlkaliMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < AlkalineEarthMetals.length; i++) {
+        AlkalineEarthMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < TransitionMetals.length; i++) {
+        TransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < PostTransitionMetals.length; i++) {
+        PostTransitionMetals[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NonMetal.length; i++) {
+        NonMetal[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Halogen.length; i++) {
+        Halogen[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < NobleGas.length; i++) {
+        NobleGas[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Metalloid.length; i++) {
+        Metalloid[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Lanthanide.length; i++) {
+        Lanthanide[i].style.opacity = "0.1";
+    }
+    for (i = 0; i < Actinide.length; i++) {
+        Actinide[i].style.opacity = "1";
+    }
+}
+
+//show gas type menu
+function showGTMenu() {
+    document.getElementById("sgtm").style.display = "block";
+    document.getElementById("show-gas-type-menu").style.display = "none";
+    document.getElementById("hide-gas-type-menu").style.display = "inline-block";
+    setTimeout(function () {
+        document.getElementById("sgtm").style.opacity = "1";
+    }, 100);
+}
+function hideGTMenu() {
+    document.getElementById("sgtm").style.opacity = "0";
+    document.getElementById("show-gas-type-menu").style.display = "inline-block";
+    document.getElementById("hide-gas-type-menu").style.display = "none";
+    setTimeout(function () {
+        document.getElementById("sgtm").style.display = "none";
+    }, 500)
+}
