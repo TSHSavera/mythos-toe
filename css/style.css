@@ -6,6 +6,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
 }
 body {
   margin: 0;
@@ -127,6 +128,8 @@ th[data-tool-tip]:hover::after {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding: 1em;
+  position: sticky;
+  z-index: 1;
 }
 .topnav-title {
   background-image: linear-gradient(90deg, #cc2b5e, #753a88, hsl(54, 100%, 50%) );
@@ -148,7 +151,7 @@ th[data-tool-tip]:hover::after {
   top: 0;
   right: -10%;
   width: 0%;
-  z-index: 10;
+  z-index: 4;
   padding: 1em;
   min-height: 100%;
   transition: all 0.5s ease-in-out;
@@ -166,7 +169,7 @@ th[data-tool-tip]:hover::after {
   transition: all 0.5s;
   display: none;
   opacity: 0;
-  z-index: 5;
+  z-index: 1;
   /*Bobo*/
 }
 .ep-symbol{
@@ -365,7 +368,7 @@ th[data-tool-tip]:hover::after {
   display: none;
   transition: all 0.5s;
   grid-template-columns: 55% 10% 15% 10% 10%;
-  z-index: 3;
+  z-index: 2;
 }
 #status-footer-toe {
   position: fixed;
@@ -379,7 +382,6 @@ th[data-tool-tip]:hover::after {
   align-items: center;
   transition: all 0.5s;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  z-index: 1;
 }
 #status-footer-toe div {
   text-align: center;;
@@ -697,6 +699,30 @@ th[data-tool-tip]:hover::after {
   font-size: 12px;
   padding: 1em;
   transition: all 0.5s;
+}
+.console {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  width: 75%;
+  height: 60%;
+  max-width: 90%;
+  max-height: 80%;
+  resize: auto;
+  overflow:auto;
+  z-index: 5;
+}
+.console-window-bar {
+  padding: 0.5em;
+  background-color: #2a2a2a;
+  font-size: 12px;
+}
+#close-console {
+  float: right;
+  padding: 0.3em;
 }
 
 

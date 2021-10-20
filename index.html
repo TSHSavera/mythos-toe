@@ -23,6 +23,7 @@
           font-weight: 700;
         }
       </style>
+      <script src="js/elementdata.js"></script>
     </head>
 
     <body class="mt-pc" onerror="addError(); errorMATOE004()">
@@ -256,6 +257,28 @@
       <div class="periodic-element-groups">
 
       </div>
+      
+      <!--Console-->
+      <div class="console" id="console">
+        <div class="console-window-bar" id="consolebar">
+          <span>Console: <span id="error-count">0</span> Error/s</span>
+          <span class="fas fa-window-close" id="close-console"></span>
+        </div>
+         <div class="console-main-area">
+            <span id="test1"></span>
+            <span id="test2"></span>
+            <span id="test3"></span>
+            <span id="test4"></span>
+            <span id="test5"></span>
+            <span id="test6"></span>
+            <br>
+            <button id="next-test" onclick="nextElement(1)">next</button>
+            <button id="prev-test" onclick="prevElement(1)">prev</button>
+         </div>
+         <div class="console-cmd-area">
+           Test
+         </div>
+      </div>
 
 
       <div class="bg-opacity" id="element-preview-opac">
@@ -286,7 +309,7 @@
           <span class="sf-head-text montserrat-700" id="athena-head" data-tool-tip="Click me!" title="">Athena™</span>
         </div>
         <div>
-          <span id="error-count">0</span> Error/s
+          <span>0</span> Error/s
         </div>
         <div>
           <button id="show-gas-type-menu" onclick="showGTMenu()">Show Gas Types</button>
@@ -351,11 +374,11 @@
         </div>
         <div id="updates">
           <p class="h-t"><b>App Updates</b></p>
-          <p>BETA Version: <span id="beta-version-id">2.5.2</span></p>
+          <p>BETA Version: <span id="beta-version-id">2.5.3</span></p>
           <p>App Version: <span id="app-version-id">1.0.0</span></p>
           <p>Client Version: <span id="client-version-id">2.5.2 / 1.0.0</span></p>
           <p>Installed Version: BETA 2.5.2</p>
-          <p id="update-status">Your client is up to date!</p>
+          <p id="update-status">New update available!</p>
           <button class="c-c-btn mt-pc-light" id="close-infos">Close</button>
         </div>
       </div>
@@ -365,8 +388,10 @@
         <button class="close-btn fas fa-window-close" id="clul"></button>
         <p>Update Log: </p>
         <code>
-          BETA 2.5.2: BETA will always make your site forced to offline mode.<br>
-          2.5.2
+          BETA 2.5.3: BETA will always make your site forced to offline mode.<br>
+          2.5.3<br>
+          -Fixed issue #2<br>
+          2.5.2<br>
           -Show gas type menu<br>
           -Highlights selected gas type<br>
           2.4.2<br>
