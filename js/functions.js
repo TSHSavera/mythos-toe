@@ -908,6 +908,7 @@ function prevEpan() {
         case "#":
             addError();
             errorMATOE002();
+            break;
     }
 }
 
