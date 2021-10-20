@@ -166,6 +166,7 @@ th[data-tool-tip]:hover::after {
   transition: all 0.5s;
   display: none;
   opacity: 0;
+  z-index: 5;
   /*Bobo*/
 }
 .ep-symbol{
@@ -364,7 +365,7 @@ th[data-tool-tip]:hover::after {
   display: none;
   transition: all 0.5s;
   grid-template-columns: 55% 10% 15% 10% 10%;
-  z-index: 3
+  z-index: 3;
 }
 #status-footer-toe {
   position: fixed;
@@ -378,7 +379,7 @@ th[data-tool-tip]:hover::after {
   align-items: center;
   transition: all 0.5s;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  z-index: 3
+  z-index: 1;
 }
 #status-footer-toe div {
   text-align: center;;
